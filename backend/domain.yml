@@ -35,11 +35,16 @@ intents:
 - marks
 - recorded_classes
 - batches
+- join_course
+- gat_results
 - mentors
 - Package
+- filled
 - Fee
 - Duration
+- utter_join_course
 - dress
+- aboutmsit
 - hostel
 - percentage
 - course_structure
@@ -71,20 +76,19 @@ intents:
 - deny_application
 - utter_package
 - utter_msit
-- action_package1
-- action_package2
-- action_package3
+- utter_package1
+- utter_package2
+- utter_package3
 - utter_fee_details
 - utter_msg
 - utter_options
-
+- utter_gat_results
 
 entities:
-
 - year
 - institute
 actions:
-- action_package
+- utter_package
 - action_fee
 slots: {}
 responses:
@@ -118,13 +122,16 @@ responses:
   utter_cheer_up:
   - text: "Have a good day!"
   utter_fee_details:
-  - text: Fee at JNTUH is 170000, Fee at IITH is 200000, Fee at SVU is 130000.
+  - text: Fee at JNTUH is 170000, Fee at IIITH is 200000, Fee at JNTUK, JNTUA and SVU is 130000. Variation of the fees depends on university norms
 
   utter_msit:
   - text: "MSIT (MS in IT or Masters of Science in Information Technology) is a two-year post-graduate program in Computer Science that started in 2001. MSIT is an innovative multi-university interdisciplinary post-graduate program. MSIT program is being offered by the 'Consortium of Institutions of Higher Learning' (CIHL), formed by the Universities. Under MOU with CMU, some Carnegie Mellon Researchers are providing guidance on the course content. MSIT program offers cutting-edge courses with a unique Learning-by-Doing approach that ensures you are industry-ready when you graduate"
 
+  utter_gat_results:
+  - text: Your GAT score card will be mailed to you or else you can find your results in the link -> <a href='https://www.msitprogram.net/' target='_blank'>click here</a>
+
   utter_info:
-  - text: Please go through the link for more information -> <a href='https://www.msitprogram.net/'>click here</a>
+  - text: Please go through the link for more information -> <a href='https://www.msitprogram.net/' target='_blank'>click here</a>
 
   utter_did_that_help:
   - text: Do you need any further information?
@@ -141,12 +148,12 @@ responses:
   - text: Fee at IIITH is 200000.
   utter_jntuk:
   - text: Fee at JNTUH is 130000, Fee at SVU is 130000.
-  action_package1:
-  - text: highest package is 24L <a href='https://www.msitprogram.net/'>For more info click here</a>.
-  action_package2:
-  - text: highest package is 22L.
-  action_package3:
-  - text: highest package is 20L.
+  utter_package1:
+  - text: highest package is 24LPA <a href='https://www.msitprogram.net/' target='_blank'>For more info click here</a>.
+  utter_package2:
+  - text: highest package in 2019 is 22LPA <a href='https://www.msitprogram.net/' target='_blank'>For more info click here</a>.
+  utter_package3:
+  - text: highest package in 2018 is 20LPA <a href='https://www.msitprogram.net/' target='_blank'>For more info click here</a>.
   utter_happy:
   - text: Ok. Do you want to fill the application? Click on the preferred button!
     buttons:
@@ -163,7 +170,7 @@ responses:
 
 
   utter_affirm_application:
-  - text: Thank you! Here is the link <a href='https://www.msitprogram.net/'>click here</a>
+  - text: Thank you! Here is the link <a href='https://www.msitprogram.net/' target='_blank'>click here</a>
 
   utter_prerequisites:
   - text: Having knowledge on programming is always helpful. Student must be a B.Tech/BE graduate of any stream.
@@ -173,6 +180,8 @@ responses:
 
   utter_specific:
   - text: please ask your query.
+  utter_join_course:
+  - text: Please click the link given here to know about the application process and fill the application <a href='https://www.msitprogram.net/application-process'  target='_blank'>click here</a> .
 
   utter_iamabot:
   - text: I am a bot, powered by MSIT.
@@ -224,7 +233,7 @@ responses:
   - text: There is no dress code for our college.
 
   utter_hostel:
-  - text: College hostel is available for both JNTU and IIIT. Students from IIIT should stay in hostel only and they cannot stay outside whereas for JNTU Students it is optional. It is their choice to stay within the hostel or the other.
+  - text: College hostel is available for both JNTU and IIIT. Students from IIIT should stay in hostel only and they cannot stay outside whereas for JNTU Students it is optional. It is their choice to stay within the hostel or the other. No bus facility will be available for the students. They should travel on their own.
 
   utter_percentage:
   - text: Students need to get 80% to clear the subject. <80% will be considered as fail in required courses. Students need to attempt the remedial sessions to clear the subjects.
@@ -266,19 +275,19 @@ responses:
   - text: "MSIT division, International Institute of Information Technology (IIIT): 125 seats, JNTUH: 100 seats. "
     
   utter_timings:
-  - text: "Class starts at 9 AM."
+  - text: "Class starts at 9 AM and ends at 6PM. You need to submit your assignments before 9 PM on the same day"
 
   utter_first_year:
-  - text: "In the first-year students will learn all the fundamental courses such as IT-WorkShop, Python, Java, and many more."
+  - text: "In the first-year students will learn all the fundamental courses such as IT-WorkShop, Python, Java, and many more. Please go through this link to know about the content present in each semester <a href='https://www.msitprogram.net/syllabus' target='_blank'>click here</a> ."
  
   utter_second_year:
-  - text: "In the second year students will start their specialization in which they are interested."
+  - text: "In the second year students will start their specialization in which they are interested. Please go through this link to know about the content present in each semester <a href='https://www.msitprogram.net/syllabus' target='_blank'>click here</a> ."
  
   utter_Attendence_Percentage:
   - text: "Students should have minimum of 80% attendance to clear the course."
  
   utter_count_sem:
-  - text: "6 Semesters."
+  - text: "There are totally 6 Semesters. Please go through this link to know about the content present in each semester <a href='https://www.msitprogram.net/syllabus' target='_blank'>click here</a> ."
  
   utter_sem_exams:
   - text: "There will not be any exams for students. They will be graded based on their performance in Assignments and vivas."
@@ -290,7 +299,7 @@ responses:
   - text: "For mock test and interviews student will be having separate course."
   
   utter_leave:
-  - text: "For any type of leave firstly student should take permission from their concerned mentor."  
+  - text: "For any type of leave firstly student should take permission from their concerned mentor. If the student take more leaves,  it will effect their attendance percentage"  
   
   utter_saturday:
   - text: "Every saturday student will have Competitive Programming test and presentations."

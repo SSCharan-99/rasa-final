@@ -42,6 +42,11 @@ stories:
   - intent: specific
   - action: utter_specific
 
+
+- story: join course
+  steps: 
+  - intent: join_course
+  - action: utter_join_course
 - story: happy
   steps: 
   - intent: happy
@@ -76,6 +81,15 @@ stories:
   - intent: affirm
   - action: utter_specific
 
+
+- story: gat results
+  steps:
+  - intent: gat_results
+  - action: utter_gat_results
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_specific
+
 - story: fee_details
   steps:
   - intent: fee_details
@@ -106,25 +120,25 @@ stories:
 - story: Package
   steps:
   - intent: Package
-  - action: action_package
+  - action: utter_package
   - action: utter_did_that_help
   - intent: deny
   - action: utter_happy
 
-- story: Package1
+- story: pack2020
   steps:
-  - intent: Package1
-  - action: action_package1
+  - intent: p2020
+  - action: utter_package1
 
-- story: Package2
+- story: pack2019
   steps:
-  - intent: Package2
-  - action: action_package2
+  - intent: p2019
+  - action: utter_package2
 
 - story: Package3
   steps:
-  - intent: Package3
-  - action: action_package3
+  - intent: p2018
+  - action: utter_package3
 
 - story: JNTUK
   steps:
@@ -135,7 +149,7 @@ stories:
 - story: Package
   steps:
   - intent: Package
-  - action: action_package
+  - action: utter_package
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_specific

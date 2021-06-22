@@ -11,13 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h5{
+  color: white;
+}
 .footer{
   margin-top: 1rem;
   padding: 1rem;
-  background-color: #b47474;
+  background-color: rgb(0, 89, 255);
   position: fixed;
   bottom: 0;
-  
+  top: 505px;
   left: 0px;
   width: 100%;
   text-align: center;
